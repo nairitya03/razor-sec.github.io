@@ -1,0 +1,212 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>/</id>
+  <title>Razor-Sec</title>
+  <subtitle>A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.</subtitle>
+  <updated>2021-02-08T23:47:40+07:00</updated>
+  <author>
+    <name>Razor-Sec</name>
+    <uri>/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en-US"
+    href="/"/>
+  <generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator>
+  <rights> © 2021 Razor-Sec </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>Root-me Webserver</title>
+    <link href="/posts/writeup-root-me-webserver/" rel="alternate" type="text/html" title="Root-me Webserver" />
+    <published>2020-02-08T00:00:00+07:00</published>
+  
+    <updated>2020-02-08T00:00:00+07:00</updated>
+  
+    <id>/posts/writeup-root-me-webserver/</id>
+    <content src="/posts/writeup-root-me-webserver/" />
+    <author>
+      <name>Razor-Sec</name>
+    </author>
+
+  
+    
+    <category term="Writeup" />
+    
+    <category term="root-me" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      HTML - Source code
+Look at source code
+&amp;lt;!-- 
+ Je crois que c'est vraiment trop simple là ! 
+password : xxx
+--&amp;gt;
+
+HTTP - Open redirect
+by using `hash-identifier` tool, I found that the hash algorithm is MD5:
+Type "help", "copyright", "credits" or "license" for more information.
+&amp;gt;&amp;gt;&amp;gt;
+&amp;gt;&amp;gt;&amp;gt; import md5
+&amp;gt;&amp;gt;&amp;gt; md5.new('https://facebook.com').digest().encode('hex')
+'a023cfbf...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Root-me Client</title>
+    <link href="/posts/writeup-root-me-webclient/" rel="alternate" type="text/html" title="Root-me Client" />
+    <published>2020-02-08T00:00:00+07:00</published>
+  
+    <updated>2020-02-08T00:00:00+07:00</updated>
+  
+    <id>/posts/writeup-root-me-webclient/</id>
+    <content src="/posts/writeup-root-me-webclient/" />
+    <author>
+      <name>Razor-Sec</name>
+    </author>
+
+  
+    
+    <category term="Writeup" />
+    
+    <category term="root-me" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      HTML - disabled buttons
+All you have to do is open a browser inspectior of your choosing and examine the code. (If you are using chrome, you can get to this by pressing Ctrl + Shift + I, or by right clicking and choosing ’Inspect’.)
+
+The focus of this challenge is on the input fields underneath the "Under Construction’ header. The code should look like this:
+
+&amp;lt;input disabled type="text" name...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Root-me Cryptography</title>
+    <link href="/posts/writeup-root-me-Cryptography/" rel="alternate" type="text/html" title="Root-me Cryptography" />
+    <published>2020-02-08T00:00:00+07:00</published>
+  
+    <updated>2020-02-08T00:00:00+07:00</updated>
+  
+    <id>/posts/writeup-root-me-Cryptography/</id>
+    <content src="/posts/writeup-root-me-Cryptography/" />
+    <author>
+      <name>Razor-Sec</name>
+    </author>
+
+  
+    
+    <category term="Writeup" />
+    
+    <category term="root-me" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Encoding - ASCII
+In GNU/linux, you can use the xxd command :
+$ echo "4C6520666C6167206465206365206368616C6C656E6765206573743A203261633337363438316165353436636436383964356239313237356433323465" | xxd -r -ps
+
+Encoding - UU
+Below is python3 code
+
+import uu
+uu.decode('ch1.txt','output')
+and then type linux command:
+
+cat output
+
+Hash - Message Digest 5
+Another answer posted that they used a wordlist...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>PowerShell Command</title>
+    <link href="/posts/Powershell/" rel="alternate" type="text/html" title="PowerShell Command" />
+    <published>2020-02-08T00:00:00+07:00</published>
+  
+    <updated>2020-02-08T00:00:00+07:00</updated>
+  
+    <id>/posts/Powershell/</id>
+    <content src="/posts/Powershell/" />
+    <author>
+      <name>Razor-Sec</name>
+    </author>
+
+  
+    
+    <category term="Command" />
+    
+    <category term="Windows" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      There is some command powershell which I use every time I pentesting
+
+  You may copy this content if you need
+
+
+Default PowerShell locations
+C:\\windows\\syswow64\\windowspowershell\\v1.0\\powershell
+C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell
+
+
+Basic PS commands to start
+Get-Help \* #List everything loaded
+Get-Help process #List everything containing "process"
+Get-Help Get-Item ...
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+

@@ -1,0 +1,64 @@
+[
+  
+  {
+    "title": "Root-me Webserver",
+    "url": "/posts/writeup-root-me-webserver/",
+    "categories": "Writeup, root-me",
+    "tags": "web-server",
+    "date": "2020-02-08 00:00:00 +0700",
+    
+
+
+
+
+
+    "snippet": "HTML - Source codeLook at source code&amp;lt;!--  Je crois que c&#39;est vraiment trop simple là ! password : xxx--&amp;gt;HTTP - Open redirectby using `hash-identifier` tool, I found that the hash algorithm is MD5:Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license..."
+  },
+  
+  {
+    "title": "Root-me Client",
+    "url": "/posts/writeup-root-me-webclient/",
+    "categories": "Writeup, root-me",
+    "tags": "web-client",
+    "date": "2020-02-08 00:00:00 +0700",
+    
+
+
+
+
+
+    "snippet": "HTML - disabled buttonsAll you have to do is open a browser inspectior of your choosing and examine the code. (If you are using chrome, you can get to this by pressing Ctrl + Shift + I, or by right clicking and choosing ’Inspect’.)The focus of this challenge is on the input fields underneath the ..."
+  },
+  
+  {
+    "title": "Root-me Cryptography",
+    "url": "/posts/writeup-root-me-Cryptography/",
+    "categories": "Writeup, root-me",
+    "tags": "Cryptography",
+    "date": "2020-02-08 00:00:00 +0700",
+    
+
+
+
+
+
+    "snippet": "Encoding - ASCIIIn GNU/linux, you can use the xxd command :$ echo &quot;4C6520666C6167206465206365206368616C6C656E6765206573743A203261633337363438316165353436636436383964356239313237356433323465&quot; | xxd -r -psEncoding - UUBelow is python3 codeimport uuuu.decode(&#39;ch1.txt&#39;,&#39;output&#..."
+  },
+  
+  {
+    "title": "PowerShell Command",
+    "url": "/posts/Powershell/",
+    "categories": "Command, Windows",
+    "tags": "Powershell",
+    "date": "2020-02-08 00:00:00 +0700",
+    
+
+
+
+
+
+    "snippet": "There is some command powershell which I use every time I pentesting  You may copy this content if you needDefault PowerShell locationsC:\\\\windows\\\\syswow64\\\\windowspowershell\\\\v1.0\\\\powershellC:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershellBasic PS commands to startGet-Help \\* #List ev..."
+  }
+  
+]
+
