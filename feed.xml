@@ -4,7 +4,7 @@
   <id>/</id>
   <title>Razor-Sec</title>
   <subtitle>Some writeup all about cyber security Made by Razor-Sec Cybersecurity  | Cyber Security Enthusiast | Ethical Hacking | CTF Player | Linux Operation | </subtitle>
-  <updated>2021-02-09T01:10:24+07:00</updated>
+  <updated>2021-02-09T16:40:32+07:00</updated>
   <author>
     <name>Razor-Sec</name>
     <uri>/</uri>
@@ -17,6 +17,61 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Hackthebox Delivery</title>
+    <link href="/posts/writeup-hackthebox-delivery/" rel="alternate" type="text/html" title="Hackthebox Delivery" />
+    <published>2020-02-09T00:00:00+07:00</published>
+  
+    <updated>2020-02-09T00:00:00+07:00</updated>
+  
+    <id>/posts/writeup-hackthebox-delivery/</id>
+    <content src="/posts/writeup-hackthebox-delivery/" />
+    <author>
+      <name>Razor-Sec</name>
+    </author>
+
+  
+    
+    <category term="Writeup" />
+    
+    <category term="hackthebox" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+
+Nmap
+As always we will start with nmap to scan for open ports and services:
+
+
+
+As we can see, we have 2 port open like ssh and webserver. Look at port 80 on browser
+
+
+
+Then you must see the source code. in the source code we found “delivery.htb” and “helpdesk.delivery.htb”, so we can add domain to your host like this :
+
+
+  $ sudo nano /etc/hosts
+
+
+
+
+when you have done the above, then we can i...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>

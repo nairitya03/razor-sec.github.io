@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "Hackthebox Delivery",
+    "url": "/posts/writeup-hackthebox-delivery/",
+    "categories": "Writeup, hackthebox",
+    "tags": "htb-delivery, easy-box, enumeration, costom exploitation",
+    "date": "2020-02-09 00:00:00 +0700",
+    
+
+
+
+
+
+    "snippet": "NmapAs always we will start with nmap to scan for open ports and services:As we can see, we have 2 port open like ssh and webserver. Look at port 80 on browserThen you must see the source code. in the source code we found “delivery.htb” and “helpdesk.delivery.htb”, so we can add domain to your ho..."
+  },
+  
+  {
     "title": "Root-me Webserver",
     "url": "/posts/writeup-root-me-webserver/",
     "categories": "Writeup, root-me",

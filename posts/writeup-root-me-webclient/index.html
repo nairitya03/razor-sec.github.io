@@ -38,7 +38,7 @@
 <meta name="twitter:creator" content="@Razor-Sec" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"/posts/writeup-root-me-webclient/"},"description":"HTML - disabled buttons ```# All you have to do is open a browser inspectior of your choosing and examine the code. (If you are using chrome, you can get to this by pressing Ctrl + Shift + I, or by right clicking and choosing ’Inspect’.)","@type":"BlogPosting","headline":"Root-me Client","dateModified":"2020-02-08T00:00:00+07:00","datePublished":"2020-02-08T00:00:00+07:00","url":"/posts/writeup-root-me-webclient/","author":{"@type":"Person","name":"Razor-Sec"},"@context":"https://schema.org"}</script>
+{"description":"HTML - disabled buttons ```# All you have to do is open a browser inspectior of your choosing and examine the code. (If you are using chrome, you can get to this by pressing Ctrl + Shift + I, or by right clicking and choosing ’Inspect’.)","@type":"BlogPosting","headline":"Root-me Client","dateModified":"2020-02-08T00:00:00+07:00","datePublished":"2020-02-08T00:00:00+07:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/writeup-root-me-webclient/"},"author":{"@type":"Person","name":"Razor-Sec"},"url":"/posts/writeup-root-me-webclient/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -833,6 +833,196 @@ Open https://gchq.github.io/CyberChef/ and paste in the hex above. Drag "From He
         
         
 
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
 
 
   
@@ -842,7 +1032,19 @@ Open https://gchq.github.io/CyberChef/ and paste in the hex above. Drag "From He
 
       
         
+        <a class="post-tag" href="/tags/costom-exploitation/">costom exploitation</a>
+      
+        
         <a class="post-tag" href="/tags/cryptography/">Cryptography</a>
+      
+        
+        <a class="post-tag" href="/tags/easy-box/">easy-box</a>
+      
+        
+        <a class="post-tag" href="/tags/enumeration/">enumeration</a>
+      
+        
+        <a class="post-tag" href="/tags/htb-delivery/">htb-delivery</a>
       
         
         <a class="post-tag" href="/tags/powershell/">Powershell</a>
@@ -913,6 +1115,19 @@ Open https://gchq.github.io/CyberChef/ and paste in the hex above. Drag "From He
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
   
 
@@ -948,33 +1163,6 @@ Open https://gchq.github.io/CyberChef/ and paste in the hex above. Drag "From He
 
 <!-- Fill with the other newlest posts  -->
 
-
-
-
-  
-    
-    
-      
-      
-    
-  
-    
-    
-  
-    
-    
-      
-      
-    
-  
-    
-    
-      
-      
-        
-        
-        
-          
 
 
 
@@ -1084,7 +1272,7 @@ by using `hash-identifier` tool, I found that the hash alg...
       
       
       <div class="card">
-        <a href="/posts/Powershell/">
+        <a href="/posts/writeup-hackthebox-delivery/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1101,14 +1289,14 @@ by using `hash-identifier` tool, I found that the hash alg...
   
 
   
-    Feb  8, 2020
+    Feb  9, 2020
   
 
-  <i class="unloaded">2020-02-08T00:00:00+07:00</i>
+  <i class="unloaded">2020-02-09T00:00:00+07:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>PowerShell Command</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Hackthebox Delivery</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1117,13 +1305,18 @@ by using `hash-identifier` tool, I found that the hash alg...
 
 
 
-                There is some command powershell which I use every time I pentesting
+                
 
-  You may copy this content if you need
+Nmap
+As always we will start with nmap to scan for open ports and services:
 
 
-Default PowerShell locations
-C:\\windows\\syswow64\\windowspowershell\\v1.0\\powershe...
+
+As we can see, we have 2 port open like ssh and webserver. Look at port 80 on browser
+
+
+
+Then you must see the sourc...
               </p>
             </div>
           </div>
@@ -1305,11 +1498,213 @@ C:\\windows\\syswow64\\windowspowershell\\v1.0\\powershe...
         
         
 
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
 
 
       
         
+        <a class="post-tag" href="/tags/costom-exploitation/">costom exploitation</a>
+      
+        
         <a class="post-tag" href="/tags/cryptography/">Cryptography</a>
+      
+        
+        <a class="post-tag" href="/tags/easy-box/">easy box</a>
+      
+        
+        <a class="post-tag" href="/tags/enumeration/">enumeration</a>
+      
+        
+        <a class="post-tag" href="/tags/htb-delivery/">htb delivery</a>
       
         
         <a class="post-tag" href="/tags/powershell/">Powershell</a>
