@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "Tryhackme Classic Passwd",
+    "url": "/posts/writeup-tryhackme-classic-passwd/",
+    "categories": "Writeup, tryhackme",
+    "tags": "cracking, reversing binary, radare2, ltrace",
+    "date": "2020-02-09 00:00:00 +0700",
+    
+
+
+
+
+
+    "snippet": "Introductionin this room you will train your skills in reverse engineer and bypass login. you can se room right here : https://tryhackme.com/room/classicpasswdradare2We can use radare2 to open binary and if you dont have it you can download right here : https://github.com/radareorg/radare2Then op..."
+  },
+  
+  {
     "title": "Hackthebox Delivery",
     "url": "/posts/writeup-hackthebox-delivery/",
     "categories": "Writeup, hackthebox",
