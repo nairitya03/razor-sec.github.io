@@ -676,7 +676,7 @@ then lets use ltrace</p>
 __isoc99_scanf<span class="o">(</span><span class="mh">0x555b547fe01b</span><span class="o">,</span> <span class="mh">0x7ffdad52ce30</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="kd">Insert</span> <span class="kd">your</span> <span class="kd">username</span>: <span class="kd">razor</span>
 <span class="o">)</span> <span class="o">=</span> <span class="m">1</span>
 <span class="kd">strcpy</span><span class="o">(</span><span class="mh">0x7ffdad52cda0</span><span class="o">,</span> <span class="s2">"razor"</span><span class="o">)</span>                  <span class="o">=</span> <span class="mh">0x7ffdad52cda0</span>
-<span class="kd">strcmp</span><span class="o">(</span><span class="s2">"razor"</span><span class="o">,</span> <span class="s2">"AGB6js5d9dkG7"</span><span class="o">)</span>                 <span class="o">=</span> <span class="m">49</span>
+<span class="kd">strcmp</span><span class="o">(</span><span class="s2">"razor"</span><span class="o">,</span> <span class="s2">"A---------7"</span><span class="o">)</span>                 <span class="o">=</span> <span class="m">49</span>
 <span class="kd">puts</span><span class="o">(</span><span class="s2">"\nAuthentication Error"</span>
 <span class="kd">Authentication</span> <span class="kd">Error</span>
 <span class="o">)</span>                   <span class="o">=</span> <span class="m">22</span>
@@ -684,8 +684,8 @@ __isoc99_scanf<span class="o">(</span><span class="mh">0x555b547fe01b</span><spa
 <span class="o">+++</span> <span class="kd">exited</span> <span class="o">(</span><span class="kd">status</span> <span class="m">0</span><span class="o">)</span> <span class="o">++</span><span class="na">+e
 
 </span></pre></td></tr></tbody></table></code></div></div>
-<p>And we can see the username “ strcmp(“razor”, “AGB6js5d9dkG7”) “
-then input “AGB6js5d9dkG7”</p>
+<p>And we can see the username “ strcmp(“razor”, “A———7”) “
+then input “A———7”</p>
 <h3 id="flag">Flag</h3>
 <div class="language-bat highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -693,10 +693,10 @@ then input “AGB6js5d9dkG7”</p>
 4
 5
 </pre></td><td class="rouge-code"><pre>$ ./Challenge.Challenge                                                  <span class="m">130</span> ⨯
-<span class="kd">Insert</span> <span class="kd">your</span> <span class="kd">username</span>: <span class="kd">AGB6js5d9dkG7</span>
+<span class="kd">Insert</span> <span class="kd">your</span> <span class="kd">username</span>: <span class="kd">A</span><span class="o">---------</span><span class="m">7</span>
 
 <span class="kd">Welcome</span>
-<span class="kd">THM</span><span class="o">{</span><span class="m">65235128496</span><span class="o">}</span>
+<span class="kd">THM</span><span class="o">{</span><span class="m">6</span><span class="o">---------</span><span class="m">6</span><span class="o">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 <p>and we get a flag</p>
 
