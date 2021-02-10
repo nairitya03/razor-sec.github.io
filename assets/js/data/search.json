@@ -1,9 +1,24 @@
 [
   
   {
+    "title": "Tryhackme Madeye&#39;s Castle",
+    "url": "/posts/writeup-tryhackme-madeye-castle/",
+    "categories": "Writeup, Tryhackme",
+    "tags": "cracking, ghidra, smb, burpsuite, costom exploitation, nmap, gobuster, sql-injection, hashcat, medium-box, sqlite",
+    "date": "2020-02-10 00:00:00 +0700",
+    
+
+
+
+
+
+    "snippet": "Introductionin this room we will do a lot of enumeration , gain a foothold, pivot around to a few different users, etc . You can see the room right here https://tryhackme.com/room/madeyescastleScanningNmapwhat we have to do first is scanning the ip :  $ sudo nmap -sC -sV 10.10.185.66# Nmap 7.91 s..."
+  },
+  
+  {
     "title": "Tryhackme Classic Passwd",
     "url": "/posts/writeup-tryhackme-classic-passwd/",
-    "categories": "Writeup, tryhackme",
+    "categories": "Writeup, Tryhackme",
     "tags": "cracking, reversing binary, radare2, ltrace",
     "date": "2020-02-09 00:00:00 +0700",
     
@@ -12,14 +27,14 @@
 
 
 
-    "snippet": "Introductionin this room you will train your skills in reverse engineer and bypass login. you can se room right here : https://tryhackme.com/room/classicpasswdradare2We can use radare2 to open binary and if you dont have it you can download right here : https://github.com/radareorg/radare2Then op..."
+    "snippet": "Introductionin this room you will train your skills in reverse engineer and bypass login. you can see room right here : https://tryhackme.com/room/classicpasswdradare2We can use radare2 to open binary and if you dont have it you can download right here : https://github.com/radareorg/radare2Then o..."
   },
   
   {
     "title": "Hackthebox Delivery",
     "url": "/posts/writeup-hackthebox-delivery/",
     "categories": "Writeup, hackthebox",
-    "tags": "htb-delivery, easy-box, enumeration, costom exploitation",
+    "tags": "htb-delivery, easy-box, enumeration, costom exploitation, nmap, mysql, hashcat",
     "date": "2020-02-09 00:00:00 +0700",
     
 
