@@ -4,7 +4,7 @@
   <id>/</id>
   <title>Razor-Sec</title>
   <subtitle>Some writeup all about cyber security Made by Razor-Sec Cybersecurity , Ethical Hacking , CTF Player , Linux Operation | </subtitle>
-  <updated>2021-02-11T11:58:26+07:00</updated>
+  <updated>2021-02-11T12:06:18+07:00</updated>
   <author>
     <name>Razor-Sec</name>
     <uri>/</uri>
@@ -97,9 +97,7 @@ Nma...
 
 
 
-      
-
-Introduction
+      Introduction
 in this room you will train your skills in reverse engineer and bypass login. you can see room right here : https://tryhackme.com/room/classicpasswd
 
 radare2
@@ -107,7 +105,7 @@ radare2
 We can use radare2 to open binary and if you dont have it you can download right here : https://github.com/radareorg/radare2
 Then open radare2 and here is output:
 
-$ r2 Challenge.Challenge                                   ...
+$ r2 Challenge.Challenge                                     ...
     </summary>
   
 
@@ -143,9 +141,7 @@ $ r2 Challenge.Challenge                                   ...
 
 
 
-      
-
-Nmap
+      Nmap
 As always we will start with nmap to scan for open ports and services:
 
 
@@ -162,7 +158,7 @@ Then you must see the source code. in the source code we found â€œdelivery.htbâ€
 
 
 
-when you have done the above, then we can i...
+when you have done the above, then we can imm...
     </summary>
   
 
