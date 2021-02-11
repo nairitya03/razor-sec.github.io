@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "Hackthebox Delivery",
+    "url": "/posts/writeup-hackthebox-tenet/",
+    "categories": "Writeup, hackthebox",
+    "tags": "htb-tenet, medium-box",
+    "date": "2020-02-11 00:00:00 +0700",
+    
+
+
+
+
+
+    "snippet": "IntroductionThe tenet machine of Hackthebox is an active machine. here we will learn a lot about RCE in php and other privileges. I suggest you read all of these writeups to understand what’s going on here. you can join this room in hereEnumerationNmapfirst we must scanning the machine :$ sudo nm..."
+  },
+  
+  {
     "title": "Tryhackme Madeye&#39;s Castle",
     "url": "/posts/writeup-tryhackme-madeye-castle/",
     "categories": "Writeup, Tryhackme",
