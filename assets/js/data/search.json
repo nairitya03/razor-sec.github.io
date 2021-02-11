@@ -1,10 +1,10 @@
 [
   
   {
-    "title": "Hackthebox Delivery",
+    "title": "Hackthebox Tenet",
     "url": "/posts/writeup-hackthebox-tenet/",
     "categories": "Writeup, hackthebox",
-    "tags": "htb-tenet, medium-box",
+    "tags": "htb-tenet, medium-box, nmap, rce-php, cosum exploitation",
     "date": "2020-02-11 00:00:00 +0700",
     
 
