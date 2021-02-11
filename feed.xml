@@ -4,7 +4,7 @@
   <id>/</id>
   <title>Razor-Sec</title>
   <subtitle>Some writeup all about cyber security Made by Razor-Sec Cybersecurity , Ethical Hacking , CTF Player , Linux Operation | </subtitle>
-  <updated>2021-02-11T12:06:18+07:00</updated>
+  <updated>2021-02-11T12:08:42+07:00</updated>
   <author>
     <name>Razor-Sec</name>
     <uri>/</uri>
@@ -49,7 +49,6 @@
 
 
       Introduction
-
 in this room we will do a lot of enumeration , gain a foothold, pivot around to a few different users, etc . You can see the room right here https://tryhackme.com/room/madeyescastle
 
 Scanning
@@ -61,7 +60,7 @@ what we have to do first is scanning the ip :
 
 
 # Nmap 7.91 scan initiated Mon Feb  1 13:01:15 2021 as: nmap -sC -sV -oA nmap hogwarts-castle.thm
-Nma...
+Nmap...
     </summary>
   
 
