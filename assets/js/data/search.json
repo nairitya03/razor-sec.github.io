@@ -4,7 +4,7 @@
     "title": "Hackthebox Tenet",
     "url": "/posts/writeup-hackthebox-tenet/",
     "categories": "Writeup, hackthebox",
-    "tags": "htb-tenet, medium-box, nmap, rce-php, cosum exploitation",
+    "tags": "htb-tenet, medium-box, nmap, rce-php, custom exploitation",
     "date": "2020-02-11 00:00:00 +0700",
     
 
@@ -19,7 +19,7 @@
     "title": "Tryhackme Madeye&#39;s Castle",
     "url": "/posts/writeup-tryhackme-madeye-castle/",
     "categories": "Writeup, Tryhackme",
-    "tags": "cracking, ghidra, smb, burpsuite, costom exploitation, nmap, gobuster, sql-injection, hashcat, medium-box, sqlite",
+    "tags": "cracking, ghidra, smb, burpsuite, custom exploitation, nmap, gobuster, sql-injection, hashcat, medium-box, sqlite",
     "date": "2020-02-10 00:00:00 +0700",
     
 
@@ -49,7 +49,7 @@
     "title": "Hackthebox Delivery",
     "url": "/posts/writeup-hackthebox-delivery/",
     "categories": "Writeup, hackthebox",
-    "tags": "htb-delivery, easy-box, enumeration, costom exploitation, nmap, mysql, hashcat",
+    "tags": "htb-delivery, easy-box, enumeration, custom exploitation, nmap, mysql, hashcat",
     "date": "2020-02-09 00:00:00 +0700",
     
 
