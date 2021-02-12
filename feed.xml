@@ -4,7 +4,7 @@
   <id>/</id>
   <title>Razor-Sec</title>
   <subtitle>Some writeup all about cyber security Made by Razor-Sec Cybersecurity , Ethical Hacking , CTF Player , Linux Operation | </subtitle>
-  <updated>2021-02-12T01:47:42+07:00</updated>
+  <updated>2021-02-12T21:32:09+07:00</updated>
   <author>
     <name>Razor-Sec</name>
     <uri>/</uri>
@@ -17,6 +17,51 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Tryhackme Archangel</title>
+    <link href="/posts/writeup-tryhackme-archanel/" rel="alternate" type="text/html" title="Tryhackme Archangel" />
+    <published>2020-02-12T00:00:00+07:00</published>
+  
+    <updated>2020-02-12T00:00:00+07:00</updated>
+  
+    <id>/posts/writeup-tryhackme-archanel/</id>
+    <content src="/posts/writeup-tryhackme-archanel/" />
+    <author>
+      <name>Razor-Sec</name>
+    </author>
+
+  
+    
+    <category term="Writeup" />
+    
+    <category term="Tryhackme" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Introduction
+This is partical room from tryhackme entitled archangel with easy difficulty, but for me its medium difficulty. In this room we will learn about boot2root, Web Exploitation. room link here
+
+Enumeration
+nmap
+First we must scanning the box with nmap for enumeration.
+$ sudo nmap -sC -sV 10.10.172.38
+ 
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-02-12 15:53 WIB
+Nmap scan report for...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -36,7 +81,7 @@
     
     <category term="Writeup" />
     
-    <category term="hackthebox" />
+    <category term="Hackthebox" />
     
   
 
@@ -175,7 +220,7 @@ $ r2 Challenge.Challenge                                     ...
     
     <category term="Writeup" />
     
-    <category term="hackthebox" />
+    <category term="Hackthebox" />
     
   
 
@@ -205,55 +250,6 @@ Then you must see the source code. in the source code we found “delivery.htb�
 
 
 when you have done the above, then we can imm...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Root-me Webserver</title>
-    <link href="/posts/writeup-root-me-webserver/" rel="alternate" type="text/html" title="Root-me Webserver" />
-    <published>2020-02-08T00:00:00+07:00</published>
-  
-    <updated>2020-02-08T00:00:00+07:00</updated>
-  
-    <id>/posts/writeup-root-me-webserver/</id>
-    <content src="/posts/writeup-root-me-webserver/" />
-    <author>
-      <name>Razor-Sec</name>
-    </author>
-
-  
-    
-    <category term="Writeup" />
-    
-    <category term="root-me" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      HTML - Source code
-Look at source code
-&amp;lt;!-- 
- Je crois que c'est vraiment trop simple là ! 
-password : xxx
---&amp;gt;
-
-HTTP - Open redirect
-by using `hash-identifier` tool, I found that the hash algorithm is MD5:
-Type "help", "copyright", "credits" or "license" for more information.
-&amp;gt;&amp;gt;&amp;gt;
-&amp;gt;&amp;gt;&amp;gt; import md5
-&amp;gt;&amp;gt;&amp;gt; md5.new('https://facebook.com').digest().encode('hex')
-'a023cfbf...
     </summary>
   
 

